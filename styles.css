@@ -1,0 +1,121 @@
+:root {
+  --primary-dark: #0d1117;
+  --accent-blue: #1a237e;
+}
+
+body {
+  background: linear-gradient(135deg, #0d1117 0%, #1a237e 100%);
+  color: white;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #4a90e2, #9b51e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.2;
+}
+
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.glow-1 {
+  top: -150px;
+  left: -150px;
+  background: rgba(74, 144, 226, 0.2);
+  animation: float 6s ease-in-out infinite;
+}
+
+.glow-2 {
+  bottom: -150px;
+  right: -150px;
+  background: rgba(155, 81, 224, 0.2);
+  animation: float 8s ease-in-out infinite;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #4a90e2, #9b51e0);
+  border: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-gradient:hover {
+  transform: scale(0.98);
+  box-shadow: 0 0 20px #4a90e2b3;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.benefit-card:hover {
+  transform: scale(1.05);
+}
+
+/* Call-to-Action Section */
+.cta {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--accent-blue));
+  text-align: center;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta .cta-button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+  }
+}
