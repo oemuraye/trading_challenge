@@ -63,6 +63,18 @@ body {
   animation: float 8s ease-in-out infinite;
 }
 
+.brand-img {
+  max-width: 900px;
+  margin: auto;
+  max-height: 600px;
+}
+.brand-img img {
+  border-radius: 15px;
+  object-fit: cover;
+  max-height: 500px;
+  width: 100%;
+}
+
 .btn-gradient {
   background: linear-gradient(45deg, #4a90e2, #9b51e0);
   border: none;
