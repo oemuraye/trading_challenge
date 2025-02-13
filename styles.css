@@ -28,6 +28,10 @@ body {
   position: relative;
   overflow: hidden;
 }
+.hero-section img {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
 
 .grid-bg {
   position: absolute;
@@ -129,5 +133,10 @@ body {
 @media (max-width: 768px) {
   .hero-section {
     min-height: auto;
+  }
+  .hero-section img {
+    border-top-right-radius: 0;
+    /* border-bottom-right-radius: 12px; */
+    border-bottom-left-radius: 12px;
   }
 }
