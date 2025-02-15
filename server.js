@@ -27,7 +27,7 @@ const sendMail = async (formData) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.recipient_email,
-    subject: "New Form Submission",
+    subject: "New Form Submission - 90-Day Trading Accountability Challenge",
     html: `
         <p><strong>Full Name:</strong> ${formData.full_name}</p>
         <p><strong>Email:</strong> ${formData.email}</p>
