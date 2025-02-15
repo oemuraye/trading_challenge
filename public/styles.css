@@ -4,7 +4,9 @@
 }
 
 body {
-  background: linear-gradient(135deg, #000000 0%, #FF9700 100%);
+  /* background: linear-gradient(135deg, #000000 0%, #FF9700 100%); */
+  background: rgb(255,151,0);
+background: radial-gradient(circle, rgba(255,151,0,1) 0%, rgba(0,0,0,1) 100%);
   color: white;
   overflow-x: hidden;
 }
@@ -51,6 +53,27 @@ video {
   background-size: 30px 30px;
   opacity: 0.2;
 }
+input[type="radio"] {
+  transform: scale(1.3); 
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+
+#response-msg, 
+#response-error-msg {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#response-msg.show, 
+#response-error-msg.show {
+    display: block;
+    opacity: 1;
+}
+
+
 
 .glow {
   position: absolute;

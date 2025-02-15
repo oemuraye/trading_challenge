@@ -53,7 +53,7 @@ const sendMail = async (formData) => {
     `,
 };
 
-  console.log(mailOptions);
+//   console.log(mailOptions);
 
   return transporter.sendMail(mailOptions);
 };

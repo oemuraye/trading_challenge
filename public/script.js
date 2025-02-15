@@ -5,25 +5,19 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     const responseMsg = document.getElementById("response-msg");
     const errorMsg = document.getElementById("response-error-msg");
 
-    // Clear previous messages
     responseMsg.innerText = "";
     errorMsg.innerText = "";
 
-    // Convert form data to an object
     const formData = new FormData(this);
     const jsonData = Object.fromEntries(formData.entries());
 
-    // Validate fields (Ensure required fields are not empty)
     for (const key in jsonData) {
         if (key !== "instagram_handle" && jsonData[key].trim() === "") {
-            errorMsg.innerText = "All fields must be filled.";
-            setTimeout(() => { errorMsg.innerText = ""; }, 5000); 
+            showMessage("error", "All fields must be filled!");
             return;
         }
     }
 
-
-    // Show Bootstrap spinner and disable button
     submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...`;
     submitBtn.disabled = true;
 
@@ -35,20 +29,36 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         });
 
         const result = await response.json();
-        responseMsg.innerText = result.message;
+        showMessage("success", result.message);
 
-        // Reset form fields
         this.reset();
-
-        // Hide success message after 5 seconds
-        setTimeout(() => { responseMsg.innerText = ""; }, 5000);
     } catch (error) {
         console.error("Error:", error);
-        errorMsg.innerText = "Error submitting form.";
-        setTimeout(() => { errorMsg.innerText = ""; }, 5000);
+        showMessage("error", "Error submitting form!");
     } finally {
-        // Restore button text and enable it
         submitBtn.innerHTML = "Submit";
         submitBtn.disabled = false;
     }
 });
+
+
+function showMessage(type, message) {
+    const successMsg = document.getElementById("response-message");
+    const errorMsg = document.getElementById("response-error-msg");
+
+    successMsg.classList.remove("show");
+    errorMsg.classList.remove("show");
+
+    if (type === "success") {
+        successMsg.innerText = message;
+        successMsg.classList.add("show");
+    } else if (type === "error") {
+        errorMsg.innerText = message;
+        errorMsg.classList.add("show");
+    }
+
+    setTimeout(() => {
+        successMsg.classList.remove("show");
+        errorMsg.classList.remove("show");
+    }, 5000);
+}
