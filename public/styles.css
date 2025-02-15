@@ -5,14 +5,15 @@
 
 body {
   /* background: linear-gradient(135deg, #000000 0%, #FF9700 100%); */
-  background: rgb(255,151,0);
-background: radial-gradient(circle, rgba(255,151,0,1) 0%, rgba(0,0,0,1) 100%);
+  background: #000;
+  /* background: radial-gradient(circle, rgba(255,151,0,1) 0%, rgba(0,0,0,1) 100%); */
   color: white;
   overflow-x: hidden;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, #000000 0%, #ff990036 100%);
+  /* background: #ffffff0d; */
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
