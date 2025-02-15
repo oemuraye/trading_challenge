@@ -33,19 +33,19 @@ const sendMail = async (formData) => {
         <p><strong>Email:</strong> ${formData.email}</p>
         <p><strong>WhatsApp:</strong> ${formData.whatsapp_number}</p>
         <p><strong>Country:</strong> ${formData.country}</p>
-        <p><strong>Instagram:</strong> ${formData.instagram_handle || "N/A"}</p>
+        <p><strong>Instagram:</strong> ${formData.instagram_handle || "didn't provide"}</p>
         <p><strong>Trading Experience:</strong> ${formData.trading_experience}</p>
         <p><strong>Primary Market:</strong> ${formData.primary_market}</p>
         <p><strong>Trading Results:</strong> ${formData.trading_results}</p>
         <p><strong>Biggest Trading Struggle:</strong> ${formData.biggest_trading_struggle}</p>
         <p><strong>Current Broker:</strong> ${formData.current_broker}</p>
-        <p><strong>Willing to Use Recommended Broker:</strong> ${formData.willing_to_use_recommended_broker ? "Yes" : "No"}</p>
+        <p><strong>Willing to Use Recommended Broker:</strong> ${formData.willing_to_use_recommended_broker}</p>
         <p><strong>Capital to Manage:</strong> ${formData.capital_to_manage}</p>
         <p><strong>Self-Discipline Score:</strong> ${formData.self_discipline_score}</p>
         <p><strong>Trade Journaling:</strong> ${formData.trade_journaling}</p>
         <p><strong>Blown Account Before:</strong> ${formData.blown_account}</p>
-        <p><strong>Times Blown Account:</strong> ${formData.times_blown_account || "N/A"}</p>
-        <p><strong>Largest Loss:</strong> ${formData.largest_loss || "N/A"}</p>
+        <p><strong>Times Blown Account:</strong> ${formData.times_blown_account}</p>
+        <p><strong>Largest Loss:</strong> ${formData.largest_loss}</p>
         <p><strong>90-Day Goal:</strong> ${formData.goal_for_challenge}</p>
         <p><strong>Daily Check-In Commitment:</strong> ${formData.daily_check_in_commitment}</p>
         <p><strong>Feedback on Trades:</strong> ${formData.trade_feedback_commitment}</p>
@@ -53,9 +53,7 @@ const sendMail = async (formData) => {
     `,
 };
 
-//   console.log(mailOptions);
-
-  return transporter.sendMail(mailOptions);
+  return await transporter.sendMail(mailOptions);
 };
 
 // Handle form submission

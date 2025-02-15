@@ -29,7 +29,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         });
 
         const result = await response.json();
-        showMessage("success", result.message);
+        showMessage("success", result.message);        
 
         this.reset();
     } catch (error) {
@@ -43,7 +43,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 
 
 function showMessage(type, message) {
-    const successMsg = document.getElementById("response-message");
+    const successMsg = document.getElementById("response-msg");
     const errorMsg = document.getElementById("response-error-msg");
 
     successMsg.classList.remove("show");
