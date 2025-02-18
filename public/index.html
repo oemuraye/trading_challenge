@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Trading Accountability Challenge</title>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -21,17 +24,15 @@
         
         <div class="container h-100">
             <div class="row h-100 align-items-center">
-                <div class="glass-card m-auto hero-content px-0">
+                <div class="glass-card m-auto hero-content px-0 mt-3">
                     <div class="pt-5 p-2 mb-4 ps-3 ps-md-5 d-flex flex-column align-items-start justify-content-center">
-                        <h1 class="display-4 fw-bold mb-4 gradient-text">90-Day Trading Accountability Challenge</h1>
-                        <span>With Cliff Cheqonas</span>
-                        <p class="lead text-light mb-4">Join a structured program to fix your trading psychology and improve withdrawals!</p>
-                        <p class="text-light opacity-75 mb-4">Break the cycle of overtrading, revenge trading, and blown accounts. Get expert guidance and real accountability!</p>
-                        <div class="py-5"><a href="#form-section" class="btn btn-gradient btn-lg px-5 py-3 text-white d-inline">Join the Program</a></div>
+                        <h1 class="display-3 fw-bold mb-4 gradient-text">90-Day Trading Accountability Challenge <span><i>With</i> Cliff Cheqona</span></h1>                
+                        <p class="lead text-light mb-0">Join a structured program to fix your trading psychology and improve withdrawals!</p>
+                        <p class="text-light opacity-75 mb-4">Break the cycle of overtrading, revenge trading, and blown accounts. <br> Get expert guidance and real accountability!</p>
+                        <div class="py-3"><a href="#form-section" class="btn btn-gradient btn-lg px-5 py-3 text-white d-inline">Join the Program</a></div>
                     </div>
                     <div class="px-0">
-                      <img src="./hero-image2.jpg" alt="" width="100%" height="100%" class="">
-                      <!-- <img src="./hero-image.jpg" alt=""> -->
+                      <img src="./images/cliff-hero.png" alt="" width="100%" height="100%" class="">
                     </div>
                 </div>
             </div>
@@ -133,8 +134,10 @@
           </div>
           <div class="col-md-6 col-sm-12 my-4">
             <label for="whatsapp" class="form-label">WhatsApp Number</label>
-            <input type="text" class="form-control" id="whatsapp" name="whatsapp_number" required>
-            <!-- <input type="text" class="form-control" id="whatsapp" name="entry.1200208829" required> -->
+            <div class="row">
+              <input type="tel" class="form-control" id="whatsapp" name="whatsapp_number" required>
+              <!-- <input type="tel" class="form-control d-none" id="whatsApp" name="entry.1200208829" hidden> -->
+            </div>
           </div>
         </div>
     

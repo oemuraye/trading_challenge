@@ -1,5 +1,19 @@
+const whatsappInput = document.getElementById("whatsapp");
+let iti;
+
+document.addEventListener("DOMContentLoaded", function () {
+    iti = window.intlTelInput(whatsappInput, {
+        initialCountry: "ng",
+        loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js"),
+    });
+});
+
+
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    const fullNumber = iti.getNumber();
+    whatsappInput.value = fullNumber;
 
     const submitBtn = document.getElementById("submit-btn");
     const responseMsg = document.getElementById("response-msg");

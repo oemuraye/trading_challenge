@@ -34,11 +34,24 @@ body {
 .hero-content {
   display: grid;
   grid-template-columns: 60% 40%;
+  background-image: url('./images/hero_cliff.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-section img {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   object-fit: cover;
+  display: none;
+}
+.hero-content h1 span {
+  font-size: 24px;
+  position: relative;
+  top: -6px;
+  color: var(--accent-orange);
+}
+.hero-content h1 span i {
+  font-weight: 400;
 }
 video {
   border-radius: 15px;
@@ -53,13 +66,6 @@ video {
                     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 30px 30px;
   opacity: 0.2;
-}
-input[type="radio"] {
-  transform: scale(1.3); 
-  margin-right: 8px;
-  position: relative;
-  top: 1px;
-  cursor: pointer;
 }
 
 #response-msg, 
@@ -113,7 +119,7 @@ input[type="radio"] {
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, #FF9700, #FF4500);
+  background: linear-gradient(45deg, #FF9700, #000);
   border: none;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -164,6 +170,31 @@ input[type="radio"] {
 .form-section .form-control:focus {
   box-shadow: none;
 }
+input[type="radio"] {
+  transform: scale(1.3); 
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+select {
+  cursor: pointer;
+}
+.iti__selected-country-primary {
+  margin-left: 10px;
+}
+.iti--inline-dropdown .iti__dropdown-content {
+  margin-left: 10px;
+  background-color: #130b00;
+}
+.iti__search-input  {
+  padding: 8px;
+  border-radius: none !important;
+  border: none !important;
+}
+.iti__search-input:focus  {
+  border: none !important;
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -178,9 +209,15 @@ input[type="radio"] {
     border-top-right-radius: 0;
     /* border-bottom-right-radius: 12px; */
     border-bottom-left-radius: 12px;
+    display: block;
   }
   .hero-content {
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+  .hero-content h1 span {
+    font-size: 18px;
+    top: -3px;
   }
 }
