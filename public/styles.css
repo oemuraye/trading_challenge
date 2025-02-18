@@ -185,10 +185,10 @@ select {
 }
 .iti--inline-dropdown .iti__dropdown-content {
   margin-left: 10px;
-  background-color: #130b00;
+  background-color: #130b00 !important;
 }
 .iti__search-input  {
-  padding: 8px;
+  padding: 8px !important;
   border-radius: none !important;
   border: none !important;
 }
