@@ -187,6 +187,9 @@ select {
   margin-left: 10px;
   background-color: #130b00 !important;
 }
+.iti__dropdown-content {
+  background-color: #130b00 !important;
+}
 .iti__search-input  {
   padding: 8px !important;
   border-radius: none !important;
